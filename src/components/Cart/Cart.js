@@ -18,7 +18,16 @@ class Cart extends Component {
         return (
             <section id="Cart">
                 <NavBar />
-                {this.renderCartItems(cart)}
+                <div className="cart-body">
+                    <div className="cart-labels">
+                        <h1>Your Cart</h1>
+                        <h3>QUANTITY</h3>
+                        <h3>PRICE</h3>
+                    </div>
+                    <div className="cart-items-wrapper">
+                        {this.renderCartItems(cart)}
+                    </div>
+                </div>
             </section>
         )
     }
