@@ -1,4 +1,8 @@
+:root{
+    --cart-bg-color:#f7f7f7;
+}
 #Cart{
     width:100vw;
     height:100vh;
+    background-color: var(--cart-bg-color);
 }
