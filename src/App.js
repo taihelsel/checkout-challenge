@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 /*Components*/
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";

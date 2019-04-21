@@ -43,7 +43,7 @@ class Cart extends Component {
                     <h3>SUBTOTAL</h3>
                     <h2>${cartTotal.toFixed(2)}</h2>
                 </div>
-                <div className="cart-checkout-btn" onClick={this.handleCheckoutBtnClick}>
+                <div className="cart-submit-btn" onClick={this.handleCheckoutBtnClick}>
                     <h2>
                         CHECK OUT
                     </h2>
