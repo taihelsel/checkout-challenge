@@ -9,12 +9,20 @@ class Cart extends Component {
             { sku: 38094374, unitPrice: 24.0, name: "Red Shirt", quantity: 2 },
             { sku: 38094375, unitPrice: 24.0, name: "Blue Shirt", quantity: 1 },
             { sku: 38094321, unitPrice: 12.0, name: "Blue socks", quantity: 4 }
-        ]
+        ],
+        cartTotal: 0,
     }
-    renderCartItems = cart => (cart.map((item, i) => (<CartItem itemData={item} key={`${item.sku}-${item.quantity}-${i}`} />)));
-
+    buildCart = cart => {
+        let cartTotal = 0;
+        const cartItems = cart.map((item, i) => {
+            cartTotal += (item.quantity * item.unitPrice);
+            return <CartItem itemData={item} key={`${item.sku}-${item.quantity}-${i}`} />
+        });
+        return { cartTotal, cartItems };
+    };
     render() {
         const { cart } = this.state;
+        const { cartTotal, cartItems } = this.buildCart(cart);
         return (
             <section id="Cart">
                 <NavBar />
@@ -25,8 +33,12 @@ class Cart extends Component {
                         <h3>PRICE</h3>
                     </div>
                     <div className="cart-items-wrapper">
-                        {this.renderCartItems(cart)}
+                        {cartItems}
                     </div>
+                </div>
+                <div className="cart-footer">
+                    <h3>SUBTOTAL</h3>
+                    <h2>${cartTotal.toFixed(2)}</h2>
                 </div>
             </section>
         )
