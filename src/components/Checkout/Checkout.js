@@ -9,6 +9,10 @@ class Checkout extends Component {
         nameOnCard: "",
         /*shipping*/
         name: "",
+        address: "",
+        apt: "",
+        city: "",
+        zipCode: "",
     }
     handleGenericInputChange = target => e => {
         const _state = { ...this.state };
@@ -35,12 +39,29 @@ class Checkout extends Component {
                         </div>
                         <div className="checkout-shipping-wrapper">
                             <h1>Shipping Address</h1>
-
                             <GenericFormInput
                                 label={"Name"}
                                 onChange={this.handleGenericInputChange("name")}
                                 value={this.state.name}
                                 placeholder={"Full name"}
+                            />
+                            <GenericFormInput
+                                label={"Address"}
+                                onChange={this.handleGenericInputChange("address")}
+                                value={this.state.address}
+                                placeholder={"Address"}
+                            />
+                            <GenericFormInput
+                                label={"Apt/suite/etc"}
+                                onChange={this.handleGenericInputChange("apt")}
+                                value={this.state.apt}
+                                placeholder={"Apt/suite/etc"}
+                            />
+                            <GenericFormInput
+                                label={"City"}
+                                onChange={this.handleGenericInputChange("city")}
+                                value={this.state.city}
+                                placeholder={"City"}
                             />
                         </div>
                     </div>
