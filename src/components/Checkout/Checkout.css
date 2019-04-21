@@ -9,6 +9,7 @@
 #Checkout{
     width:100vw;
     height:100vh;
+    background-color: var(--checkout-bg-color);
 }
 .checkout-body{
     margin: 5em 3.5em 0 3.5em;
@@ -45,14 +46,11 @@
 }
 .checkout-info-wrapper h1,.checkout-shipping-wrapper h1{
     display:flex;
-    flex:1;
     font-weight: 400;
 }
 .checkout-info-wrapper{
-}
-.checkout-info-body{
-
+    margin-right:20px;
 }
 .checkout-shipping-wrapper{
-
+    margin-left:20px;
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import "./GenericFormInput.css";
-const GenericFormInput = ({ value, onChange }) => {
+const GenericFormInput = ({ label, value, onChange, placeholder }) => {
     return (
-        <div>
-            GenericFormInput
+        <div className="generic-input-wrapper">
+            <h3>{label}</h3>
+            <input type="text" placeholder={placeholder} onChange={onChange} value={value} />
         </div>
     );
 };

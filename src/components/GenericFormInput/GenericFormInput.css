@@ -1,0 +1,23 @@
+.generic-input-wrapper{
+    display:flex;
+    margin:7px 0;
+}
+.generic-input-wrapper h3{
+    display:flex;
+    flex:1;
+    margin:0;
+    padding:0;
+    font-size:18px;
+    font-weight: 400;
+    justify-content: flex-start;
+    align-items: center;
+}
+.generic-input-wrapper input{
+    display:flex;
+    flex:2;
+    font-size:18px;
+    padding:10px;
+    border:none;
+    background-color:white;
+    color:grey;
+}
