@@ -20,6 +20,9 @@ class Cart extends Component {
         });
         return { cartTotal, cartItems };
     };
+    handleCheckoutBtnClick = e => {
+        console.log("check out btn clicked");
+    }
     render() {
         const { cart } = this.state;
         const { cartTotal, cartItems } = this.buildCart(cart);
@@ -39,6 +42,11 @@ class Cart extends Component {
                 <div className="cart-footer">
                     <h3>SUBTOTAL</h3>
                     <h2>${cartTotal.toFixed(2)}</h2>
+                </div>
+                <div className="cart-checkout-btn" onClick={this.handleCheckoutBtnClick}>
+                    <h2>
+                        CHECK OUT
+                    </h2>
                 </div>
             </section>
         )
